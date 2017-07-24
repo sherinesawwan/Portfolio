@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Ubbi Dubbi Translator</title>
+
+<body style="background-color:#009999">
+
+<div style="background-color:#e6e6e6;padding:10px;">
+  <center><p style="font-family:Sketch3D;font-size:85px">Ubbi Dubbi Translator</p></center>
+</div>
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<br>
+<br>
+
+<div>
+    <label for="Your Sentence">Your sentence</label>
+    <input type="text" id="oob" name="firstname" placeholder="Type in your sentence here...">
+    <input type="submit" value="Submit" onclick="showUbbiDubbi()">
+  </form>
+</div>
+
+<br>
+
+<h1 style="text-align:center;font-family:LemonMilk;font-size=70px" id="sentence"></h1>
+
+<script>
+function showUbbiDubbi(){
+var str=document.getElementById("oob").value;
+var text="";
+for(i=0; i<str.length; i++) {
+    if (str.charAt(i) == "a") {
+      text = text + "ub" + str.charAt(i);
+    }
+    else if (str.charAt(i)=="e") {
+      text = text + "ub" + str.charAt(i);
+    }
+    else if (str.charAt(i)=="i") {
+      text = text + "ub" + str.charAt(i);
+    }
+    else if (str.charAt(i)=="o") {
+      text = text + "ub" + str.charAt(i);
+    }
+    else if (str.charAt(i)=="u") {
+      text = text + "ub" + str.charAt(i);
+    }
+    else {
+    text = text + str.charAt(i);
+    }
+}
+    document.getElementById("sentence").innerHTML = text
+}
+
+</script>
+</body>
+</html>
